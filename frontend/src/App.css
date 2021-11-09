@@ -1,0 +1,250 @@
+/* ========== GOOGLE FONTS ==========*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/* ========== GLOBAL STYLES ==========*/
+:root {
+  --primary-color: #353a5d;
+  --primary-color-light: #5d617d;
+  --primary-color-lighter: #aeb0be;
+  --secondary-color: #747c9e;
+  --secondary-color-light: #8289a8;
+  --secondary-color-lighter: rgb(144, 150, 177);
+  --body-color: rgb(250, 255, 255);
+  --text-color: #f4ffff;
+  --dark-color: #23252f;
+  --light-color: #f4f4f4;
+
+  --header-height: 4rem;
+
+  --border-sm: 5px;
+  --border-md: 10px;
+
+  --shadow-lg: 0 10px 15px -3px rgba(105, 110, 145, 0.1),
+    0 4px 6px -2px rgba(105, 110, 145, 0.05);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== NAVBAR ==========*/
+.navbar-wrapper {
+  background-color: var(--primary-color);
+  height: var(--header-height);
+}
+
+.navbar-wrapper li a {
+  color: var(--text-color);
+  letter-spacing: 1px;
+  transition: all 0.1s ease-in-out;
+}
+
+.navbar-wrapper li:hover a {
+  color: var(--primary-color-lighter);
+}
+
+/* ========== REGISTER and LOGIN PAGES ==========*/
+.auth-wrapper {
+  height: calc(100vh - var(--header-height));
+  padding-top: 2rem;
+}
+
+.auth-form-container {
+  background-color: var(--primary-color-light);
+  border-radius: var(--border-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-form-container h2 {
+  color: var(--text-color);
+  letter-spacing: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form .form-control {
+  color: var(--dark-color);
+}
+
+form .form-control::placeholder {
+  color: var(--dark-color);
+}
+
+form .form-control:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.25rem rgb(105 110 145 / 50%);
+}
+
+.btn {
+  color: var(--text-color);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn:hover {
+  color: var(--text-color);
+}
+
+.btn-auth {
+  background-color: var(--secondary-color);
+}
+
+.btn-auth:hover {
+  background-color: var(--primary-color-lighter);
+}
+
+.btn-add {
+  background-color: var(--primary-color);
+}
+.btn-add:hover {
+  background-color: var(--primary-color-light);
+}
+
+.btn-clear {
+  background-color: var(--primary-color-lighter);
+}
+.btn-clear:hover {
+  background-color: var(--primary-color-light);
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 0.15rem solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075rem);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1rem 1rem var(--primary-color);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+/* ========== HOME PAGE ==========*/
+.contact-form-wrapper {
+  background-color: var(--secondary-color-lighter);
+  border-radius: var(--border-sm);
+}
+
+.filter-input {
+  box-shadow: 0 0 0 0.2rem rgb(105 110 145 / 10%);
+  padding: 0.8rem;
+  border: none;
+}
+
+.add-contact-msg {
+  color: var(--primary-color);
+}
+
+.card {
+  margin-bottom: 0.5rem;
+  background-color: var(--body-color);
+  background-color: #fff;
+  border: none;
+  border-radius: var(--border-sm);
+  box-shadow: var(--shadow-lg);
+  color: var(--primary-color);
+}
+
+.badge {
+  background-color: var(--primary-color-light);
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.list-group {
+  gap: 0.4rem;
+}
+
+.btn-edit {
+  background-color: var(--secondary-color-lighter);
+}
+
+.btn-delete {
+  background-color: var(--secondary-color);
+}
+
+/* ========== MEDIA QUERIES ==========*/
+@media only screen and (min-width: 768px) {
+  .auth-form-container {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .auth-form-container {
+    width: 50% !important;
+  }
+
+  .contact-form-wrapper,
+  .filter-contacts-wrapper {
+    width: 90% !important;
+  }
+}

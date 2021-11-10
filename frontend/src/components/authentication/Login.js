@@ -6,8 +6,8 @@ import { setAlert } from "../../redux/actions/alertActions";
 import PropTypes from "prop-types";
 
 const Login = ({
-  history,
   auth: { error, isAuthenticated },
+  history,
   loginUser,
   clearErrors,
   setAlert,
@@ -16,7 +16,6 @@ const Login = ({
     if (isAuthenticated) {
       history.push("/");
     }
-
     if (error === "Invalid Credentials") {
       setAlert(error, "danger");
       clearErrors();

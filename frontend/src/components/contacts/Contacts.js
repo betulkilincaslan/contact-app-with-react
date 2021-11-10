@@ -20,7 +20,7 @@ const Contacts = ({ contact: { contacts, filtered, loading } }) => {
           ))
         )
       ) : (
-        <i class='fas fa-spinner fa-pulse'></i>
+        <i className='fas fa-spinner fa-pulse'></i>
       )}
     </>
   );

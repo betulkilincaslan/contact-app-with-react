@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { loginUser, clearErrors } from "../../redux/actions/authActions";
 import { setAlert } from "../../redux/actions/alertActions";
@@ -12,9 +12,11 @@ const Login = ({
   clearErrors,
   setAlert,
 }) => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (isAuthenticated) {
-      history.push("/");
+      navigate("/");
     }
     if (error === "Invalid Credentials") {
       setAlert(error, "danger");

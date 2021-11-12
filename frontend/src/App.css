@@ -191,6 +191,7 @@ input[type="radio"]::before {
 input[type="radio"]:checked::before {
   transform: scale(1);
 }
+
 /* ========== HOME PAGE ==========*/
 .contact-form-wrapper {
   background-color: var(--secondary-color-lighter);
